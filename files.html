@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body onscroll="myFunction()">
+
+<div class="header" style="font-family: Segoe UI,Arial,sans-serif; color: #4CAF50;">
+<B>DataPortal</b> <div style="float: right;">WEB & PROGRAMMING INFORMATION PORTAL</div>
+	<br>
+</div>
+<!-- Sidebar -->
+<ul>
+  <div class="sideheader"><b>Uploaded Files</b></div>
+  <li><a href="#">File 1 </a></li>
+  <li><a href="#">File 2 </a></li>
+  <li><a href="#">File 3 </a></li>
+</ul>
+
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a href="html.html">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="php.html">PHP</a>
+  <a href="javascript.html">JAVASCRIPT</a>
+  <a href="c.html">C++</a>
+  <a href="design.html">DESIGN</a>
+	<a class="active" href="files.html">FILES</a>
+	<a href="login.html"style="float: right">LOGIN</a>
+   <a href="int_projects.html"style="float: right">INT. PROJECTS</a>
+  <a href="projects.html"style="float: right">EXT. PROJECTS</a>
+</div>
+
+<div style="margin-left:15%">
+
+<div class="contentheader">
+  <h1>Files</h1>
+</div>
+
+<div class="content">
+<p>Here you can upload and download files to/from the database.</p>
+<p>You can navigate through uploaded files through the side-navigation bar and upload by clicking on the upload button.</p>
+
+<div class="upload">UPLOAD FILE</div>
+</div>
+
+</div>
+
+<script>
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+<!-- Clock script -->
+<script>
+
+<!-- Linking the clock script with the website -->
+<script src="clock.js"></script>
+
+<!-- Clock div -->
+<div id='clock'></div>
+</body>
+</html>

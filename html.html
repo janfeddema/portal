@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body onscroll="myFunction()">
+
+<div class="header" style="font-family: Segoe UI,Arial,sans-serif; color: #4CAF50;">
+<B>DataPortal</b> <div style="float: right;">WEB & PROGRAMMING INFORMATION PORTAL</div>
+	<br>
+</div>
+<!-- Sidebar -->
+<ul>
+  <div class="sideheader"><b>HTML5</b></div>
+  <div class="subheader"><b>Links</b></div>
+  <li><a href="https://www.w3schools.com/html/html_layout.asp" target="_blank">Layout</a></li>
+  <li><a href="https://www.w3schools.com/html/html_responsive.asp" target="_blank">Responsive</a></li>
+  <li><a href="https://www.w3schools.com/html/html_computercode_elements.asp" target="_blank">Computer Code</a></li>
+  <li><a href="https://www.w3schools.com/html/html_tables.asp" target="_blank">Tables</a></li>
+  <li><a href="https://www.w3schools.com/html/html_lists.asp" target="_blank">Lists</a></li>
+  <li><a href="https://www.w3schools.com/html/html_blocks.asp" target="_blank">Blocks</a></li>
+  <li><a href="https://www.w3schools.com/html/html_classes.asp" target="_blank">Classes </a></li>
+  <li><a href="https://www.w3schools.com/html/html_styles.asp" target="_blank">Styles </a></li>
+  <li><a href="https://www.w3schools.com/html/html_links.asp" target="_blank">Links</a></li>
+  <li><a href="https://www.w3schools.com/html/html_images.asp" target="_blank">Images</a></li>
+  <li><a href="https://www.w3schools.com/html/html_symbols.asp" target="_blank">Symbols</a></li>
+  <div class="sideheader"><b>HTML Forms</b></div>
+  <div class="subheader"><b>Links</b></div>
+  <li><a href="https://www.w3schools.com/html/html_forms.asp" target="_blank">Forms</a></li>
+  <li><a href="https://www.w3schools.com/html/html_form_elements.asp" target="_blank">Form Elements</a></li>
+  <li><a href="https://www.w3schools.com/html/html_form_input_types.asp" target="_blank">Input Types</a></li>
+  <li><a href="https://www.w3schools.com/html/html_form_attributes.asp" target="_blank">Input Attributes</a></li>
+  <div class="sideheader"><b>HTML Graphics</b></div>
+  <div class="subheader"><b>Links</b></div>
+  <li><a href=" https://www.w3schools.com/html/html5_canvas.asp" target="_blank">Canvas</a></li>
+  <li><a href="https://www.w3schools.com/html/html5_svg.asp" target="_blank">SVG</a></li>
+  <li><a href="https://www.w3schools.com/html/html_googlemaps.asp" target="_blank">Google Maps</a></li>
+  <li><a href=" " target="_blank"> </a></li>
+  <li><a href=" " target="_blank"> </a></li>
+  <li><a href=" " target="_blank"> </a></li>
+</ul>
+
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a class="active" href="javascript:void(0)">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="php.html">PHP</a>
+  <a href="javascript.html">JAVASCRIPT</a>
+  <a href="c.html">C++</a>
+  <a href="design.html">DESIGN</a>
+	<a href="files.html">FILES</a>
+	<a href="login.html"style="float: right">LOGIN</a>
+   <a href="int_projects.html"style="float: right">INT. PROJECTS</a>
+  <a style="float: right" href="projects.html">EXT. PROJECTS</a>
+
+</div>
+
+
+<details> teeeeest</details>
+
+<div style="margin-left:15%">
+
+<div class="contentheader">
+</div>
+<!--<div class="w3-panel w3-info w3-center">
+
+<p><div style="font-size: 20px;">
+<h2> HTML </h2>
+<p>Here you can navigate through the portal and get access to HTML tutorials and useful links for creating websites.</p></div>
+<br>
+</div>-->
+
+
+
+<div class="content">
+
+<h4>What is HTML?</h2>
+<p>HTML is a computer language devised to allow website creation. These websites can then be viewed by anyone else connected to the Internet. It is relatively easy to learn, with the basics being accessible to most people in one sitting; and quite powerful in what it allows you to create. It is constantly undergoing revision and evolution to meet the demands and requirements of the growing Internet audience under the direction of the » W3C, the organisation charged with designing and maintaining the language.
+The definition of HTML is HyperText Markup Language.
+HyperText is the method by which you move around on the web — by clicking on special text called hyperlinks which bring you to the next page. The fact that it is hyper just means it is not linear — i.e. you can go to any place on the Internet whenever you want by clicking on links — there is no set order to do things in.
+Markup is what HTML tags do to the text inside them. They mark it as a certain type of text (italicised text, for example).
+HTML is a Language, as it has code-words and syntax like any other language.</p>
+</div>
+
+
+<script>
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>

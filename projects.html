@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body onscroll="myFunction()">
+
+<div class="header" style="font-family: Segoe UI,Arial,sans-serif; color: #4CAF50;">
+<B>DataPortal</b> <div style="float: right;">WEB & PROGRAMMING INFORMATION PORTAL</div>
+	<br>
+</div>
+<!-- Sidebar -->
+<ul>
+ <div class="sideheader"><b>PROJECTS</b></div>
+  <div class="subheader"><b>Links</b></div>
+  <li><a href="../SSS/index.html" target="_blank">Gymnastiek SSS</a></li>
+	<li><a href="../game/start.html" target="_blank">Gamehall</a></li>
+	<li><a href="../CoinTask/index.html" target="_blank">Coin Editor</a></li>
+  <li><a href="../Webclass/index.html" target="_blank">Portal 1.0</a></li>
+  <li><a href="../Webshop/index2.html" target="_blank">Webshop</a></li>
+  <li><a href="../Webshop_table/webshop.html" target="_blank">Webshop Table</a></li>
+  <li><a href="../table.html" target="_blank">Information Research Table</a></li>
+</ul>
+
+<div id="navbar">
+  <a href="index.html">Home</a>
+  <a href="html.html">HTML</a>
+  <a href="css.html">CSS</a>
+  <a href="php.html">PHP</a>
+  <a href="javascript.html">JAVASCRIPT</a>
+  <a href="c.html">C++</a>
+  <a href="design.html">DESIGN</a>
+	<a href="files.html">FILES</a>
+	<a href="login.html"style="float: right">LOGIN</a>
+   <a href="int_projects.html"style="float: right">INT. PROJECTS</a>
+  <a class="active" style="float: right" href="#">EXT. PROJECTS</a>
+</div>
+
+<div style="margin-left:15%">
+
+<div class="contentheader">
+</div>
+
+<div class="w3-panel w3-info w3-center">
+
+<p><div style="font-size: 20px;">
+<h2> PROJECTS </h2>
+<p>Here you can find my projects I've been working on or I'm still working on. The most important projects are listed on top.</p></div>
+<br>
+</div>
+
+<div class="content">
+
+</div>
+</div>
+
+<script>
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
