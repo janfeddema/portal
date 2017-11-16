@@ -1,76 +1,159 @@
 <!DOCTYPE html>
+
+<!-- Responsive website by Jan Feddema -->
+<!-- 2017 © - Started on 16-11-2017    -->
+
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--                            METAS & LINKS                              -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- For other devices -->
+  <meta charset="utf-8"> <!-- Specifying character encoding -->
+  <link rel="stylesheet" type"text/css" href="style.css"> <!-- Linking the style.css file with HTML -->
+  <link rel="script" href="js/js.js"/> <!-- Linking javascript file -->
+
+<!--                              STYLE TYPEWRITER                           -->
 <style>
 
-</style>
-</head>
-<body onscroll="myFunction()">
-
-<div class="header" style="font-family: Segoe UI,Arial,sans-serif; color: #4CAF50;">
-<B>DataPortal</b> <div style="float: right;">WEB & PROGRAMMING INFORMATION PORTAL</div>
-	<br>
-</div>
-<!-- Sidebar -->
-<ul>
-  <div class="sideheader"><b>Uploaded Files</b></div>
-  <li><a href="#">File 1 </a></li>
-  <li><a href="#">File 2 </a></li>
-  <li><a href="#">File 3 </a></li>
-</ul>
-
-<div id="navbar">
-  <a href="index.html">Home</a>
-  <a href="html.html">HTML</a>
-  <a href="css.html">CSS</a>
-  <a href="php.html">PHP</a>
-  <a href="javascript.html">JAVASCRIPT</a>
-  <a href="c.html">C++</a>
-  <a href="design.html">DESIGN</a>
-	<a class="active" href="files.html">FILES</a>
-	<a href="login.html"style="float: right">LOGIN</a>
-   <a href="int_projects.html"style="float: right">INT. PROJECTS</a>
-  <a href="projects.html"style="float: right">EXT. PROJECTS</a>
-</div>
-
-<div style="margin-left:15%">
-
-<div class="contentheader">
-  <h1>Files</h1>
-</div>
-
-<div class="content">
-<p>Here you can upload and download files to/from the database.</p>
-<p>You can navigate through uploaded files through the side-navigation bar and upload by clicking on the upload button.</p>
-
-<div class="upload">UPLOAD FILE</div>
-</div>
-
-</div>
-
-<script>
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
 }
-</script>
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 21em;} /* Length of typewriter */
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+  .line-1{
+    margin-top: 3%;
+    width: 24em;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+  }
+
+  /* Animation */
+  .anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 10em;} /* Length of typewriter */
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+.upload_file {
+  display: block;
+  border: solid #20F818 3px;
+  width: 7%;
+  padding: 5px;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
 
 
-<!-- Clock script -->
-<script>
+  <!--                          NAVIGATION BAR                               -->
+  <div id="container"> <!-- Container/Wrapper -->
+    <p class="line-1 anim-typewriter">PORTAL/FILES.HTML</p>    <!-- Typewriting Title -->
+    <div class="navbar">
+      <ul>
+        <li><a href="index.html">INDEX</a></li>
+        <li><a href="web.html">WEB</a></li>
+        <li><a href="programming.html">PROGRAMMING</a></li>
+        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="files.html">FILES</a></li>
+        <li style="float: right"><a href="login.html">LOGIN</a></li>
+      </ul>
+      <hl>
+    </div>
 
-<!-- Linking the clock script with the website -->
-<script src="clock.js"></script>
 
-<!-- Clock div -->
-<div id='clock'></div>
+  <!--                            ARTICLE                                    -->
+    <div class="article">
+      <article>
+        <p>
+          Here you can access and upload files.
+        </p>
+        <br><br>
+        <div class="upload_file">UPLOAD</div>
+
+        <br><br>
+        <table width="100%">
+          <tr>
+            <td align="left"><a href="#">Download #1</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #2</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #3</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #4</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #5</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #6</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #7</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #8</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #9</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #10</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #11</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #12</a></td>
+            <td>Description</td>
+          </tr>
+
+        </table>
+      </article>
+    </div>
+
+
+  <!--                            FOOTER                                     -->
+
+  <div class="footer">
+    <p>2017 © Portal by Jan Feddema</p>
+
+  </div> <!-- End container -->
 </body>
 </html>

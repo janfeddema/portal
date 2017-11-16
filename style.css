@@ -1,0 +1,96 @@
+/* Responsive website by Jan Feddema */
+/*              STYLING              */
+/* 2017 © - Started on 16-11-2017    */
+
+/* Implemented Fonts */
+@font-face { font-family: "Droid Sans Mono", src: url('fonts/DroidSansMono.ttf'); } /* Monospace type of font */
+
+/* Green Color Code: #20F818 */
+
+body {
+  background-color: black;
+  font-family: Droid Sans Mono, monospace;
+  color: #20F818; /* Bright Green color */
+  height: calc(100vh - 8em); /* Needed for typewriter */
+}
+
+
+#container { /* Setting up the container for the website. Everything will be inside this container. */
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+  margin-top: 3%;
+
+  text-align: left;
+  border: solid #20F818 /*Bright Green*/ 3px;
+
+  width: 50%;
+}
+
+/* Typewriter title settings - Inserted on each page locally --
+.line-1{
+    margin-top: 3%;
+    width: 24em;
+    margin-left: auto;
+    margin-right: auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+} */
+
+/* Nav Bar Settings */
+
+.navbar {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+a {
+  color: #20F818;
+}
+
+li a {
+    color: #20F818;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+li a:hover {
+    font-size: 18px;
+}
+
+.article {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding: 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  padding: 0px 15px 0px 33px;
+}
