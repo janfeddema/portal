@@ -17,7 +17,7 @@ body {
 
 #container { /* Setting up the container for the website. Everything will be inside this container. */
   position: absolute;
-
+  background-color: black;
   top: 0;
   bottom: 0;
   left: 0;
