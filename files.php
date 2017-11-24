@@ -10,7 +10,6 @@
   <meta charset="utf-8"> <!-- Specifying character encoding -->
   <link rel="stylesheet" type"text/css" href="style.css"> <!-- Linking the style.css file with HTML -->
   <link rel="script" href="js/js.js"/> <!-- Linking javascript file -->
-  <title>Portal 3.0</title>
 
 <!--                              STYLE TYPEWRITER                           -->
 <style>
@@ -49,45 +48,54 @@
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 21em;} /* Length of typewriter */
+    to{width: 11em;} /* Length of typewriter */
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
   }
 
-/*                  Fixed Background
-#bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+.upload_file {
+  display: block;
+  border: solid #20F818 3px;
+  width: 7%;
+  padding: 5px;
+  cursor: pointer;
 }
-#bg img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  min-width: 50%;
-  min-height: 50%;
-}
-*/
 </style>
 
 </head>
 <body>
-<!--    Fixed Background
-  <div id="bg">
-    <img src="bg.jpg" alt="">
-  </div>-->
 
+  <!-- FILE UPLOADING SCRIPT -->
+  <?php
+  	// echo "<h1>Hello World</h1>";
+  	// print_r($_GET);
+  	// print_r($_POST);
+  	// print_r($_SERVER);
+  	// print_r($_FILES);
+
+  	if ($_FILES)
+  	{
+  		$uploaddir = '/var/www/uploads/';
+  		echo "$uploaddir<br>\n";
+  		$uploadfile = $uploaddir . basename($_FILES['inputFile']['name']);
+  		echo "$uploadfile";
+
+  		if (move_uploaded_file($_FILES['inputFile']['tmp_name'], $uploadfile))
+  		{
+  	  		echo "File is valid, and was successfully uploaded.<br>\n";
+  		}
+  		else
+  		{
+  			echo "Possible file upload attack!<br>\n";
+  		}
+  	}
+  ?>
 
   <!--                          NAVIGATION BAR                               -->
   <div id="container"> <!-- Container/Wrapper -->
-    <p class="line-1 anim-typewriter">Welcome to the index of the Portal...</p>    <!-- Typewriting Title -->
+    <p class="line-1 anim-typewriter">PORTAL/FILES.HTML</p>    <!-- Typewriting Title -->
     <div class="navbar">
       <ul>
         <li><a href="index.html">INDEX</a></li>
@@ -105,32 +113,72 @@
     <div class="article">
       <article>
         <p>
-          Welcome to portal. You can navigate through the portal using the navigation-bar above.
+          Here you can upload files.
         </p>
-        <p>
-          It is recommended to use Google Chrome browser on this website.
-          If you use Internet Explorer or another sub-par browser you might experience some errors.
-        </p>
+        <br><br>
 
-        <table width="100%">
+        <form action="#" method="post" accept-charset="utf-8" enctype="multipart/form-data" >
+            <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        	<input type="file" name="inputFile"><br>
+          <br>
+        	<input type="submit">
+
+        </form>
+        <br><br>
+        <!--<table width="100%">
           <tr>
-            <th>Changelog</th>
+            <td align="left"><a href="#">Download #1</a></td>
+            <td>Description</td>
           </tr>
           <tr>
-            <td>21-11-17</td>
-            <td>Updated to Pi and Github</td>
+            <td align="left"><a href="#">Download #2</a></td>
+            <td>Description</td>
           </tr>
           <tr>
-            <td>18-11-17</td>
-            <td>Implemented more pages with helpful links to websites under programming/web.</td>
+            <td align="left"><a href="#">Download #3</a></td>
+            <td>Description</td>
           </tr>
           <tr>
-            <td>15-11-17</td>
-            <td>Remade the portal with a console-like layout.</td>
+            <td align="left"><a href="#">Download #4</a></td>
+            <td>Description</td>
           </tr>
-        </table>
+          <tr>
+            <td align="left"><a href="#">Download #5</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #6</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #7</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #8</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #9</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #10</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #11</a></td>
+            <td>Description</td>
+          </tr>
+          <tr>
+            <td align="left"><a href="#">Download #12</a></td>
+            <td>Description</td>
+          </tr>
+
+        </table>-->
       </article>
     </div>
+
 
   <!--                            FOOTER                                     -->
 
