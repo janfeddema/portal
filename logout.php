@@ -1,4 +1,9 @@
+<?php
+session_start();
+ ?>
+
 <!DOCTYPE html>
+
 
 <!-- Responsive website by Jan Feddema -->
 <!-- 2017 © - Started on 16-11-2017    -->
@@ -6,10 +11,13 @@
 <html>
 <head>
   <!--                            METAS & LINKS                              -->
+  <link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- For other devices -->
   <meta charset="utf-8"> <!-- Specifying character encoding -->
   <link rel="script" href="js/js.js"/> <!-- Linking javascript file -->
-  <title>Portal 3.0 | Programming Software</title>
+  <!--<link rel="stylesheet" type="text/css" href="loginstyle.css">-->
+
+  <title>Portal 3.0 | Login</title>
 
 <!--                              STYLE TYPEWRITER                           -->
 <style>
@@ -143,27 +151,121 @@ li a:hover {
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 24em;} /* Length of typewriter */
+    to{width: 8em;} /* Length of typewriter */
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
   }
 
-.button_back {
-  border: solid #20F818 3px;
-  width: 26%;
-  padding: 5px;
+/*                            STYLE LOGIN                                     */
+form {
+    /*border: 3px solid #20F818;*/
+    width: 50%;
+    margin: auto;
 }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #20F818;
+    background-color: black;
+    box-sizing: border-box;
+    color: #20F818;
+}
+
+button { /* Login Button */
+    background-color: #181818; /* Dark Grey */
+    color: #20F818;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button_back {
+  width: auto;
+  color: #20F818;
+  padding: 10px 18px;
+  background-color: #181818; /* Dark Grey */
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    color: #20F818;
+    padding: 10px 18px;
+    background-color: #181818; /* Dark Grey */
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+.center_logout {
+  text-align: center;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+}
+
+.nologin {
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nologin:hover {
+  font-size: 17px;
+}
+
+/* Login  */
+
+
 </style>
+
 
 </head>
 <body>
 
+  <header>
+    <nav>
+      <div class="main-wrapper">
+      </div>
+    </nav>
+  </header>
+
 
   <!--                          NAVIGATION BAR                               -->
   <div id="container"> <!-- Container/Wrapper -->
-    <p class="line-1 anim-typewriter">PORTAL/PROGRAMMING/PROGRAMMING_SOFTWARE.HTML</p>    <!-- Typewriting Title -->
+    <p class="line-1 anim-typewriter">LOGGING OUT...</p>    <!-- Typewriting Title -->
     <!--<div class="navbar">
       <ul>
         <li><a href="index.html">INDEX</a></li>
@@ -180,38 +282,27 @@ li a:hover {
   <!--                            ARTICLE                                    -->
     <div class="article">
       <article>
-        <p>
-          <table width="100%">
-            <th>Programming Software</th>
-            <tr>
-              <td><a href="https://atom.io/" target="_blank">Atom</td>
-              <td>Good text editor for the creation of websites.</td>
-            </tr>
-            <tr>
-              <td><a href="https://notepad-plus-plus.org/download/v7.5.1.html" target="_blank">Notepad ++</td>
-              <td>Another basic text editor used for programming/creating sites.</td>
-            <tr>
-              <td><a href="https://www.embarcadero.com/products/cbuilder" target="_blank">C++ Builder</td>
-              <td>IDE for programming C++.</td>
-            </tr>
-            <tr>
-              <td> <a href="http://www.putty.org/" target="_blank">Putty</td>
-              <td>SSH client for connecting with the Raspberry.</td>
-            </tr>
-            <tr>
-              <td <a href="https://www.termius.com/" target="_blank">Termius</td>
-              <td>Another SSH client but with a bit more of a modern look.</td>
-            </tr>
-            <tr>
-              <td> <a href="https://www.apachefriends.org/index.html" target="_blank">XAMPP</td>
-              <td>Easy Apache distribution.</td>
-            </tr>
-            <tr>
-              <td> <a href="https://winscp.net/eng/download.php" target="_blank">WinSCP</td>
-              <td>Software used for transferring files to Raspberry.</td>
-          </table>
-
-        </p>
+        <header>
+          <nav>
+            <div class="main-wrapper">
+              <ul>
+                <!--<li><a href="index.php">Home</a></li>-->
+              </ul>
+              <div class="nav-login">
+                <div class="imgcontainer">
+  <img src="media/avatar.png"  width="150px" height="150px" alt="Avatar" class="avatar">
+</div>
+<div class="center_logout">
+                <?php
+                  if (isset($_SESSION['u_id'])) {
+                    echo "Are you sure you want to logout {$_SESSION['u_uid']}?<br>";
+                    echo '<form action="includes/logout.inc.php" method="POST">
+                            <button type="submit" name="submit">Logout</button>
+                          </form>';
+                             }
+                 ?>
+                 <p>Click <a href="home.php">here</a> to go back..</p>
+               </div>
       </article>
     </div>
 
@@ -219,8 +310,21 @@ li a:hover {
   <!--                            FOOTER                                     -->
 
   <div class="footer">
-    <a href="programming.php"><div class="button_back"> GO BACK</div></a>
-    <p>2017 © Portal by Jan Feddema</p>
+    <p>2017 &copy; Portal by Jan Feddema &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php
+
+        if (isset($_SESSION['u_id'])) {
+          echo "You are logged in as: {$_SESSION['u_uid']}";
+        } else {
+          echo 'You are not logged in...';
+                   }
+      //  }
+       ?></p>
+
+    <?php
+      if (!isset($_SESSION['u_id'])) {
+        header("Location: ../index.php?notloggedin");
+      }
+      ?>
 
   </div> <!-- End container -->
 </body>

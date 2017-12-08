@@ -94,3 +94,11 @@ li a:hover {
   bottom: 0;
   padding: 0px 15px 0px 33px;
 }
+
+.nav-login {
+  background-color: black;
+}
+
+.signuptext {
+  text-align: center;
+}

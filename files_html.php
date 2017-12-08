@@ -9,13 +9,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- For other devices -->
   <meta charset="utf-8"> <!-- Specifying character encoding -->
   <link rel="script" href="js/js.js"/> <!-- Linking javascript file -->
-  <title>Portal 3.0 | Programming Software</title>
+  <title>Portal 3.0 | Programming Links</title>
 
 <!--                              STYLE TYPEWRITER                           -->
 <style>
 /* Responsive website by Jan Feddema */
 /*              STYLING              */
 /* 2017 © - Started on 16-11-2017    */
+
+/* Left Navbar */
+.vertical-menu {
+    width: 200px;
+    border: 2px solid #20F818;
+    border-radius: 5px;
+    box-shadow: 1px 1px 20px #20F818;
+}
+
+.vertical-menu a {
+  /*  background-color: #eee;*/
+    color: #20F818;
+    display: block;
+    padding: 1px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    font-size: 16px;
+}
+
+.vertical-menu a.header1 {
+    background-color: #20F818;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.vertical-menu a.filemanager_icon {
+  background-image: url(media/home.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 2px;
+}
+
+.vertical-menu a.doc_icon {
+  background-image: url(media/doc.png);
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 3px;
+}
+
+/* Local Container Styling */
+#container { /* Setting up the container for the website. Everything will be inside this container. */
+  position: absolute;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4%;
+  margin-top: 6%;
+
+  text-align: left;
+  border: solid #20F818 /*Bright Green*/ 3px;
+
+  width: 65%;
+}
 
 /* Implemented Fonts */
 @font-face { font-family: "Droid Sans Mono", src: url('fonts/DroidSansMono.ttf'); } /* Monospace type of font */
@@ -143,7 +204,7 @@ li a:hover {
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 24em;} /* Length of typewriter */
+    to{width: 12em;} /* Length of typewriter */
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
@@ -155,6 +216,23 @@ li a:hover {
   width: 26%;
   padding: 5px;
 }
+
+.table1 {
+  background-color: #20F818;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.downloads {
+  background-image: url(media/icon_download.png);
+  background-repeat: no-repeat;
+  text-align: right;
+  padding: 0px 30px;
+}
+
 </style>
 
 </head>
@@ -162,64 +240,71 @@ li a:hover {
 
 
   <!--                          NAVIGATION BAR                               -->
+  <p class="line-1 anim-typewriter">PORTAL/FILEMANAGER</p>    <!-- Typewriting Title -->
+
+  <!-- Left Navbar -->
+
+  <div class="vertical-menu">
+    <a href="#" class="header1">Contents</a>
+    <a href="filemanager.php" class="filemanager_icon">Filemanager</a>
+    <a href="#" class="header1">Materials</a>
+    <a href="files_php.php" class="doc_icon">PHP</a>
+    <a href="files_html.php" class="doc_icon">HTML</a>
+    <a href="files_misc.php" class="doc_icon">MISC</a>
+  </div>
+
+
   <div id="container"> <!-- Container/Wrapper -->
-    <p class="line-1 anim-typewriter">PORTAL/PROGRAMMING/PROGRAMMING_SOFTWARE.HTML</p>    <!-- Typewriting Title -->
-    <!--<div class="navbar">
-      <ul>
-        <li><a href="index.html">INDEX</a></li>
-        <li><a href="web.html">WEB</a></li>
-        <li><a href="programming.html">PROGRAMMING</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
-        <li><a href="files.html">FILES</a></li>
-        <li style="float: right"><a href="login.html">LOGIN</a></li>
-      </ul>
-      <hl>
-    </div>-->
+    <!-- Downloadable Content Header -->
+    <table class="table1" width="100%">
+      <tr>
+        <td>HTML</td>
+      </tr>
+    </table>
 
-
-  <!--                            ARTICLE                                    -->
     <div class="article">
       <article>
-        <p>
-          <table width="100%">
-            <th>Programming Software</th>
-            <tr>
-              <td><a href="https://atom.io/" target="_blank">Atom</td>
-              <td>Good text editor for the creation of websites.</td>
-            </tr>
-            <tr>
-              <td><a href="https://notepad-plus-plus.org/download/v7.5.1.html" target="_blank">Notepad ++</td>
-              <td>Another basic text editor used for programming/creating sites.</td>
-            <tr>
-              <td><a href="https://www.embarcadero.com/products/cbuilder" target="_blank">C++ Builder</td>
-              <td>IDE for programming C++.</td>
-            </tr>
-            <tr>
-              <td> <a href="http://www.putty.org/" target="_blank">Putty</td>
-              <td>SSH client for connecting with the Raspberry.</td>
-            </tr>
-            <tr>
-              <td <a href="https://www.termius.com/" target="_blank">Termius</td>
-              <td>Another SSH client but with a bit more of a modern look.</td>
-            </tr>
-            <tr>
-              <td> <a href="https://www.apachefriends.org/index.html" target="_blank">XAMPP</td>
-              <td>Easy Apache distribution.</td>
-            </tr>
-            <tr>
-              <td> <a href="https://winscp.net/eng/download.php" target="_blank">WinSCP</td>
-              <td>Software used for transferring files to Raspberry.</td>
-          </table>
-
-        </p>
+        <table class="download_table">
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+          <tr>
+            <td class="downloads">Downloadable File</td>
+          </tr>
+        </table>
       </article>
+    </div>
     </div>
 
 
   <!--                            FOOTER                                     -->
 
   <div class="footer">
-    <a href="programming.php"><div class="button_back"> GO BACK</div></a>
+    <a href="home.php"><div class="button_back"> GO BACK</div></a>
     <p>2017 © Portal by Jan Feddema</p>
 
   </div> <!-- End container -->
