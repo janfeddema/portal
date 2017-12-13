@@ -1,0 +1,1 @@
+The includes folder contains .php inc files that are required in order to enstablish a connection with the database and communicate with the other .php files.
