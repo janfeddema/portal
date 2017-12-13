@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- For other devices -->
   <meta charset="utf-8"> <!-- Specifying character encoding -->
   <link rel="script" href="js/js.js"/> <!-- Linking javascript file -->
-  <title>Portal 3.0 | Web Links</title>
+  <title>Portal 3.0</title>
 
 <!--                              STYLE TYPEWRITER                           -->
 <style>
@@ -143,17 +143,94 @@ li a:hover {
   }
   @keyframes typewriter{
     from{width: 0;}
-    to{width: 13em;} /* Length of typewriter */
+    to{width: 25em;} /* Length of typewriter */
   }
   @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}
     to{border-right-color: transparent;}
   }
 
-.button_back {
-  border: solid #20F818 3px;
-  width: 26%;
-  padding: 5px;
+/*                            STYLE LOGIN                                     */
+form {
+    border: 3px solid #20F818;
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #20F818;
+    background-color: black;
+    box-sizing: border-box;
+    color: #20F818;
+}
+
+button { /* Login Button */
+    background-color: #181818; /* Dark Grey */
+    color: #20F818;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    color: #20F818;
+    padding: 10px 18px;
+    background-color: #181818; /* Dark Grey */
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 50%;
+    }
+}
+
+.hein {
+  position: absolute;
+  left: 10%;
+}
+
+.nologin {
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nologin:hover {
+  font-size: 17px;
 }
 </style>
 
@@ -162,8 +239,7 @@ li a:hover {
 
 
   <!--                          NAVIGATION BAR                               -->
-  <div id="container"> <!-- Container/Wrapper -->
-    <p class="line-1 anim-typewriter">PORTAL/WEB/PHP.HTML</p>    <!-- Typewriting Title -->
+    <p class="line-1 anim-typewriter">HEEEEEEEEEEEEEIIIIINEEEEKEEEEENNNNNNNNN BIER!</p>    <!-- Typewriting Title -->
     <!--<div class="navbar">
       <ul>
         <li><a href="index.html">INDEX</a></li>
@@ -178,49 +254,11 @@ li a:hover {
 
 
   <!--                            ARTICLE                                    -->
-    <div class="article">
-      <article>
-        <p>
-          <table width="100%">
-            <th>Helpful Links/Websites</th>
-            <tr>
-              <td><a href="https://www.w3schools.com/">W3Schools</a></td>
-              <td >Contains a lot of information about the creation of websites (HTML/PHP/JAVASCRIPT.. etc)</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.codecademy.com/en/tracks/web">Codecademy</a></td>
-              <td>Tutorial/course for HTML/CSS</td>
-            </tr>
-            <tr>
-              <td><a href="http://www.htmldog.com/">HTML Dog</a></td>
-              <td>Website containing information and tutorials regarding HTML/CSS/JS.</td>
-            </tr>
-            <tr>
-              <td><a href="https://learn.shayhowe.com/html-css/">Learn Shayowe</a></td>
-                <td>HTML/CSS tutorial course</td>
-            </tr>
-            <tr>
-              <td><a href="#">Tutorialpoint CSS</a></td>
-              <td>Long and structured CSS tutorial.</td>
-            </tr>
-            <tr>
-              <td><a href="https://www.w3.org/Style/Examples/011/firstcss.en.html">W3 HTML/CSS</a></td>
-              <td>Basic html/css starting tutorial of w3.org.</td>
-            </tr>
 
-          </table>
 
-        </p>
-      </article>
-    </div>
-
+    <img src="media/heinekenbig.png"  width="1200px" height="700px" class="hein">
 
   <!--                            FOOTER                                     -->
 
-  <div class="footer">
-    <a href="web.php"><div class="button_back"> GO BACK</div></a>
-    <p>2017 © Portal by Jan Feddema</p>
-
-  </div> <!-- End container -->
 </body>
 </html>

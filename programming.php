@@ -76,6 +76,7 @@ session_start();
         <li><a href="programming.php">PROGRAMMING</a></li>
         <li><a href="projects.php">PROJECTS</a></li>
         <li><a href="filemanager.php">FILEMANAGER</a></li>
+        <li><a href="profile.php">PROFILE</a></li>
         <li style="float: right"><a href="logout.php">LOGOUT</a></li>
       </ul>
       <hl>
@@ -111,7 +112,7 @@ session_start();
         if (isset($_SESSION['u_id'])) {
           echo "You are logged in as: {$_SESSION['u_uid']}";
         } else {
-          echo 'You are not logged in...';
+          header("Location: ../index.php?error=not_logged_in");
                    }
       //  }
        ?></p>

@@ -197,10 +197,10 @@ button:hover {
     background-color: #181818; /* Dark Grey */
 }
 
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
+  .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+  }
 
 img.avatar {
     border-radius: 50%;
@@ -280,8 +280,8 @@ span.psw {
               </ul>
               <div class="nav-login">
                 <div class="imgcontainer">
-  <img src="media/avatar.png"  width="150px" height="150px" alt="Avatar" class="avatar">
-</div>
+                  <img src="media/avatar.png"  width="150px" height="150px" alt="Avatar" class="avatar">
+                </div>
                 <?php
                   if (isset($_SESSION['u_id'])) {
                     echo '<form action="includes/logout.inc.php" method="POST">

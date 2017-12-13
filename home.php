@@ -102,6 +102,7 @@ a {
         <li><a href="programming.php">PROGRAMMING</a></li>
         <li><a href="projects.php">PROJECTS</a></li>
         <li><a href="filemanager.php">FILEMANAGER</a></li>
+        <li><a href="profile.php">PROFILE</a></li>
         <li style="float: right"><a href="logout.php">LOGOUT</a></li>
       </ul>
       <hl>
@@ -111,8 +112,14 @@ a {
   <!--                            ARTICLE                                    -->
     <div class="article">
       <article>
+        
         <p>
-          Welcome to portal. You can navigate through the portal using the navigation-bar above.
+          Welcome to the portal <?php         if (isset($_SESSION['u_id'])) {
+          echo "{$_SESSION['u_uid']}";
+        } else {
+          header("Location: ../index.php?error=not_logged_in");                   } ?>. 
+
+          You can navigate through the portal using the navigation-bar above.
         </p>
         <p>
           It is recommended to use Google Chrome browser on this website.
@@ -145,7 +152,7 @@ function getUserIP()
 
 $user_ip = getUserIP();
 
-echo"Your IP is: " . $user_ip; // Output IP address [Ex: 177.87.193.134]
+echo"You connected with the following IP: " . $user_ip; // Output IP address [Ex: 177.87.193.134]
 
 
 ?>
@@ -156,11 +163,15 @@ echo"Your IP is: " . $user_ip; // Output IP address [Ex: 177.87.193.134]
             <th>Changelog</th>
           </tr>
           <tr>
-            <td>7-12-17</td>
+            <td>13-12-17</td>
+            <td>Added 'profile' page.</td>
+          </tr>
+          <tr>
+            <td>07-12-17</td>
             <td>Added a login and registration system.</td>
           </tr>
           <tr>
-            <td>1-12-17</td>
+            <td>01-12-17</td>
             <td>Replaced the 'files' page with a Filemanager.</td>
           </tr>
           <tr>
@@ -193,16 +204,9 @@ echo"Your IP is: " . $user_ip; // Output IP address [Ex: 177.87.193.134]
         if (isset($_SESSION['u_id'])) {
           echo "You are logged in as: {$_SESSION['u_uid']}";
         } else {
-          echo 'You are not logged in...';
-                   }
+          header("Location: ../index.php?error=not_logged_in");                   }
       //  }
        ?></p>
-
-    <?php
-      if (!isset($_SESSION['u_id'])) {
-        header("Location: ../index.php?notloggedin");
-      }
-      ?>
   </div> <!-- End container -->
 </body>
 </html>
